@@ -26,7 +26,7 @@ public class MoraGame extends JPanel {
     private boolean isOver;
 
     public MoraGame(Runnable runnable) {
-        setPreferredSize(new Dimension(200, 100));
+        setMinimumSize(new Dimension(250, 100));
         setLayout(new BorderLayout());
         this.runnable = runnable;
         init();
@@ -34,7 +34,7 @@ public class MoraGame extends JPanel {
 
     private void init() {
         this.tipsLabel = new JLabel("请出拳！", JLabel.CENTER);
-        this.tipsLabel.setPreferredSize(new Dimension(200, 50));
+        this.tipsLabel.setPreferredSize(new Dimension(250, 50));
         this.tipsLabel.setFont(new Font("", 0, 15));
         this.tipsLabel.setForeground(new Color(255, 128, 128));
 
@@ -55,7 +55,7 @@ public class MoraGame extends JPanel {
         clothButton.addActionListener(l -> handle(3));
 
         JPanel centerPanel = new JPanel();
-        centerPanel.setPreferredSize(new Dimension(200, 30));
+        centerPanel.setPreferredSize(new Dimension(250, 30));
         centerPanel.add(stoneButton);
         centerPanel.add(shearsButton);
         centerPanel.add(clothButton);
